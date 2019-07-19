@@ -1,0 +1,25 @@
+{
+    "name": "mount",
+    "version": "0.0.0",
+    "description": "Module for listing, mounting and unmounting media devices",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/let-value/mount.git"
+    },
+    "author": "let.value",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/let-value/mount/issues"
+    },
+    "homepage": "https://github.com/let-value/mount#readme",
+    "scripts": {
+        "start": "esnext exec index.mjs"
+    },
+    "devDependencies": {
+        "eslint": "^6.0.1",
+        "eslint-config-esnext": "^4.0.0",
+        "eslint-plugin-editorconfig": "^2.0.0",
+        "esnext-scripts": "git://github.com/let-value/esnext-scripts.git"
+    }
+}
