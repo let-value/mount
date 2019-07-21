@@ -1,0 +1,14 @@
+export declare const list_media_devices: () => string[];
+export declare const get_device_name: (device: string) => string;
+export declare const get_device_block_path: (device: string) => string;
+export declare const get_media_path: (device: string) => string;
+export declare const get_partition: (device: string) => string;
+export declare const is_mounted: (device: string) => boolean;
+export declare const mount_partition: (partition: string, name?: string) => void;
+export declare const unmount_partition: (name?: string) => void;
+export declare const mount: (device: string, name?: string) => void;
+export declare const unmount: (device: string, name?: string) => void;
+export declare const is_removable: (device: string) => boolean;
+export declare const get_size: (device: string) => number;
+export declare const get_model: (device: string) => string;
+export declare const get_vendor: (device: string) => string;

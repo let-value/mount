@@ -2,7 +2,7 @@ import { readFileSync, lstatSync, realpathSync, existsSync } from "fs"
 import { basename } from "path"
 import { execSync } from "child_process"
 
-export const list = () =>
+export const list_media_devices = () =>
     readFileSync("/proc/partitions", "utf8")
         .split(/\r?\n/)
         .slice(2)
@@ -84,21 +84,4 @@ export const get_vendor = device => {
     let path = get_device_block_path(device) + "/device/vendor"
     if (existsSync(path)) return readFileSync(path, "utf8").trim()
     return null
-}
-
-export default function main() {
-    list().forEach(device => {
-        mount(device)
-
-        console.log("Drive:", get_device_name(device))
-        console.log("Mounted:", is_mounted(device) ? "Yes" : "No")
-        console.log("Removable:", is_removable(device) ? "Yes" : "No")
-        console.log("Size:", get_size(device), "bytes")
-        console.log("Size:", get_size(device) / Math.pow(1024, 3), "GB")
-        console.log("Model:", get_model(device))
-        console.log("Vendor:", get_vendor(device))
-        console.log(" ")
-
-        unmount(device)
-    })
 }

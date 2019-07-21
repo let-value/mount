@@ -24,7 +24,7 @@ When listing media devices library queries and parses /proc/partitions. When get
 
 ```javascript
 import {
-    list,
+    list_media_devices,
     get_device_name,
     get_device_block_path,
     get_media_path,
@@ -38,7 +38,7 @@ import {
     get_size,
     get_model,
     get_vendor
-} from "mount";
+} from "mount"
 ```
 
 ## [Examples](https://github.com/vallentin/mount.py/blob/master/README.md#examples-1)
