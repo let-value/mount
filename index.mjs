@@ -102,5 +102,3 @@ export default function main() {
         unmount(device)
     })
 }
-
-main()
